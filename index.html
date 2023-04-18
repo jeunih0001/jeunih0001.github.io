@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assests/css/style.css" />
+    <script defer src="/assests/js/script.js"></script>
+    <title>Jean Eudes</title>
+  </head>
+
+  <body>
+    <div class="nav">
+      <nav>
+        <a href="/">Jeunih</a>
+        <ul id="navMenu">
+          <li>
+            <a href="#welcome">Home</a>
+          </li>
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+          <li>
+            <a href="#projects">My Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact Me</a>
+          </li>
+        </ul>
+        <button class="btn" id="navToggler">&#9776;</button>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="hero" id="hero">
+        <div class="welcome" id="welcome">
+          <div class="text-content hidden">
+            <p class="fd-sd" style="--delay: 1;">Welcome</p>
+            <p class="fd-sd" style="--delay: 2;">I'm <span>Jean </span>Eudes</p>
+            <p class="h-colored fd-sd" style="--delay: 2.4;">Programmer/Web Developer</p>
+          </div>
+          <a  class="git fd-sd" style="--delay: 1.4;" target="_blank" href="https://github.com/jeunih0001/">
+            Jeunih0001
+            <img src="/assests/img/git.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <section class="about" id="about">
+        <h1 class="h-colored s-top hidden">about me</h1>
+        <div class="inner">
+          <div class="txt-lg s-left hidden" id="">
+            Hello, <br />
+            My name is Jean Eudes, and I'm a programmer and web developer.
+            Although I'm still new to the industry, I've been able to create
+            functional software and launch websites. I'm a fast learner and
+            adapt quickly to new challenges. I'm always eager to learn more
+            about new programming languages and technologies to improve my skills. When I'm not
+            coding, I enjoy participating in different sports activities or
+            working on my graphic design skills. Thank you for taking the time
+            to view my portfolio, and I hope to have the opportunity to work
+            with you in the future
+          </div>
+          <div class="imgs">
+            <img src="/assests/img/gd.jpg" class="s-fd hidden" alt="">
+            <img src="/assests/img/bas.jpg" class="s-fd hidden" alt="">
+          </div>
+        </div>
+        <div class="tools">
+          <p class="s-top hidden">Programming Languages I use</p>
+          <ul>
+            <li class="s-top hidden" id="html">
+              <div class="">
+                HTML
+                <img src="/assests/img/hml.svg" alt="" />
+              </div>
+              <div class="level"><div class="level-bar"></div></div>
+            </li>
+            <li class="s-top hidden" id="css">
+              <div class="">
+                CSS
+                <img src="/assests/img/css.svg" alt="" />
+              </div>
+              <div class="level"><div class="level-bar"></div></div>
+            </li>
+            <li class="s-top hidden" id="js">
+              <div class="">
+                JAVASCRIPT
+                <img src="/assests/img/js.svg" alt="" />
+              </div>
+              <div class="level"><div class="level-bar"></div></div>
+            </li>
+            <li class="s-top hidden" id="php">
+              <div class="">
+                PHP
+                <img src="/assests/img/php.svg" alt="" />
+              </div>
+              <div class="level"><div class="level-bar"></div></div>
+            </li>
+            <li class="s-top hidden" id="py">
+              <div class="">
+                PYTHON
+                <img src="/assests/img/py.svg" alt="" />
+              </div>
+              <div class="level"><div class="level-bar"></div></div>
+            </li>
+            <li class="s-top hidden" id="jv">
+              <div class="">
+                JAVA
+                <img src="/assests/img/java.svg" alt="" />
+              </div>
+              <div class="level"><div class="level-bar"></div></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <h1 class="git s-top hidden">My Projects</h1>
+        <div class="inner">
+          <ul class="flex-projects">
+            <li class="project newsapi s-fd hidden">
+              <div class="">
+                <span>Fast News</span>
+                <span>Python Flask,JAVASCRIPT</span>
+                <a target="_blank" href="https://github.com/jeunih0001/FlashNews">View Code</a>
+              </div>
+            </li>
+            <li class="project insta s-fd hidden">
+              <div class="">
+                <span>Instagram Clone</span>
+                <span>Laravel,Vue.JS</span>
+                <a target="_blank" href="https://github.com/jeunih0001/GramClone">View Code</a>
+              </div>
+            </li>
+            <li class="project notes s-fd hidden">
+              <div class="">
+                <span>Notes</span>
+                <span>Python Flask</span>
+                <a target="_blank" href="https://github.com/jeunih0001/Notes">View Code</a>
+              </div>
+            </li>
+            <li class="project dict s-fd hidden">
+              <div class="">
+                <span>Dictionary</span>
+                <span>JAVASCRIPT</span>
+                <a target="_blank" href="https://github.com/jeunih0001/Dictionary">View Code</a>
+              </div>
+            </li>
+            <li class="project joke s-fd hidden">
+              <div class="">
+                <span>Joke Api</span>
+                <span>JAVASCRIPT</span>
+                <a target="_blank" href="https://github.com/jeunih0001/JokesGenerator">View Code</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h1 class="h-colored">Contact Me</h1>
+        <div class="inner">
+          <form action="" class="s-top hidden">
+            <div class="">
+              <input type="text" placeholder="Enter Your Name" />
+              <input type="email" placeholder="Enter Your Email Address" />
+            </div>
+            <textarea
+              name="mess"
+              id=""
+              rows="10"
+              placeholder="Enter Your Message"
+            ></textarea>
+            <button>Submit</button>
+          </form>
+          <ul class="social s-left hidden">
+            <li>
+              <img src="/assests/img/gm.svg" alt="" />
+              Jeunih0001@gmail.com
+            </li>
+            <li>
+              <img src="/assests/img/git.svg" alt="" />
+              <a target="_blank" href="https://github.com/jeunih0001/Dictionary">Jeunih0001</a>
+            </li>
+            <li>
+              <img src="/assests/img/phone.svg" alt="" />
+              +250787387250
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
