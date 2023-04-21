@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap");
+
 :root {
   --color-bg: #343a40;
   --color-bg-500: #464747;
@@ -11,46 +12,55 @@
   --color-x-1: rgb(239, 55, 36);
   --color-x-1-0: rgba(239, 55, 36, 0.15);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand";
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 .s-left.hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(50px);
   transition: all 1s;
 }
+
 .s-left.show {
   filter: blur(0);
   transform: translateX(0);
   opacity: 1;
 }
+
 .s-top.hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateY(20px);
   transition: all 1s;
 }
+
 .s-top.show {
   filter: blur(0);
   transform: translateY(0);
   opacity: 1;
 }
+
 .s-fd.hidden {
   opacity: 0;
   filter: blur(5px);
   transform: scale(0.7);
   transition: all 1s;
 }
+
 .s-fd.show {
   filter: blur(0);
   transform: scale(1);
@@ -62,27 +72,29 @@ a {
     transition: none;
   }
 }
+
 .btn {
   background-color: transparent;
   outline: none;
   margin: none;
   border: none;
 }
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 .hero {
   min-height: 120vh;
-  background-image: linear-gradient(
-      34deg,
+  background-image: linear-gradient(34deg,
       rgba(85, 85, 85, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
+      rgba(0, 0, 0, 0.7)),
     url(/assests/img/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -90,12 +102,14 @@ body {
   backdrop-filter: blur(50px);
   position: relative;
 }
+
 .nav {
   position: fixed;
   z-index: 1000;
   inset-inline: 0;
   background-color: var(--color-bg-200);
 }
+
 .nav nav {
   max-width: 90%;
   margin: auto;
@@ -103,6 +117,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 #navToggler {
   color: var(--color-txt-100);
   font-size: 20px;
@@ -115,6 +130,7 @@ body {
   transition: all 0.3s ease;
   display: none;
 }
+
 #navToggler:hover {
   background-color: var(--color-bg);
 }
@@ -128,6 +144,7 @@ body {
   #navToggler {
     display: block;
   }
+
   .nav ul {
     position: absolute;
     z-index: 100;
@@ -142,6 +159,7 @@ body {
     transition: all 0.3s ease-in-out;
     transform: translateX(100%);
   }
+
   .nav ul.active {
     opacity: 1;
     transform: translateX(0);
@@ -151,10 +169,12 @@ body {
     font-weight: bold;
     color: var(--color-txt-200);
   }
+
   #navMenu a:hover {
     color: var(--color-x-1);
   }
 }
+
 .nav li {
   padding: 1em 0;
 }
@@ -166,7 +186,8 @@ nav a {
   color: var(--color-txt-200);
   transition: all 0.2s ease-in;
 }
-nav > a {
+
+nav>a {
   font-size: 1.25rem;
   padding: 1em;
   color: var(--color-txt-200);
@@ -175,6 +196,7 @@ nav > a {
 #navMenu a:hover {
   color: var(--color-x-1);
 }
+
 .welcome {
   position: relative;
   display: grid;
@@ -182,11 +204,13 @@ nav > a {
   min-height: 120vh;
   backdrop-filter: blur(5px);
 }
+
 .welcome .text-content {
   min-height: 300px;
   display: grid;
   place-content: center;
 }
+
 .git {
   display: flex;
   align-items: center;
@@ -204,6 +228,7 @@ nav > a {
   margin: 2rem auto;
   backdrop-filter: blur(1rem);
 }
+
 .h-colored {
   color: var(--color-x-1);
   font-size: 1.125rem;
@@ -215,35 +240,57 @@ nav > a {
   border-radius: 5vw;
   background-color: var(--color-x-1-0);
 }
+
 .git img {
   max-width: 2rem;
 }
+
 .text-content p {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--color-txt-200);
   text-align: center;
 }
+
 .text-content p span {
   color: var(--color-x-1);
 }
+
 .text-content .h-colored {
   color: var(--color-x-1);
   font-size: max(1rem, 2vw);
 }
+
 .text-content p:nth-child(2) {
   font-size: calc(1rem + 3vw);
 }
+
 .fd-sd {
   transform: translateX(50px);
   opacity: 0;
   filter: blur(5px);
   animation: fade 1s ease-in calc(1s * var(--delay)) 1 forwards;
 }
+
 @keyframes fade {
   to {
     filter: blur(0);
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fd-in {
+  transform: scale(.8);
+  opacity: 0;
+  filter: blur(5px);
+  animation: fadein 1s ease-in calc(1s * var(--delay)) 1 forwards;
+}
+
+@keyframes fadein {
+  to {
+    filter: blur(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -253,6 +300,7 @@ section {
   background-color: white;
   padding: 2rem 1rem;
 }
+
 section .inner {
   position: relative;
   max-width: 90%;
@@ -265,6 +313,7 @@ section .inner {
   font-size: 1.125rem;
   color: var(--color-txt-100);
 }
+
 .about .imgs {
   height: 100%;
   position: absolute;
@@ -273,6 +322,7 @@ section .inner {
   justify-content: flex-end;
   align-items: center;
 }
+
 .about .imgs img {
   display: block;
   max-width: 15vw;
@@ -281,25 +331,30 @@ section .inner {
   object-fit: cover;
   box-shadow: 0 0 1vw 3px rgb(172, 171, 171);
 }
+
 .about .imgs img:first-child {
   transform: translate(-25%, -30%);
   box-shadow: 0 0 5px 5px clt;
 }
+
 .tools {
   padding: 3rem 0 0 0;
 }
+
 .tools p {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 .tools ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   margin: 1rem;
 }
+
 .tools li {
   display: flex;
   flex-direction: column;
@@ -310,14 +365,16 @@ section .inner {
   transition: all 0.3s ease;
   box-shadow: 0 0 5px 5px var(--color-x-1-0);
 }
-.tools li > div:first-child {
+
+.tools li>div:first-child {
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: bold;
 }
+
 .tools li .level {
-margin: 1rem 0;
+  margin: 1rem 0;
   border-radius: 5px;
   overflow: hidden;
   width: 100%;
@@ -331,18 +388,23 @@ margin: 1rem 0;
   height: 100%;
   background-color: var(--color-x-1);
 }
+
 .tools li#css .level .level-bar {
   width: 70%;
 }
+
 .tools li#html .level .level-bar {
   width: 80%;
 }
+
 .tools li#js .level .level-bar {
   width: 55%;
 }
+
 .tools li#php .level .level-bar {
   width: 40%;
 }
+
 .tools li#py .level .level-bar {
   width: 70%;
 }
@@ -350,6 +412,7 @@ margin: 1rem 0;
 .tools li:hover {
   transform: translateY(-5px);
 }
+
 .tools img {
   display: block;
   max-width: 2rem;
@@ -361,16 +424,19 @@ margin: 1rem 0;
     margin: auto;
     max-width: 70%;
   }
+
   .about .imgs {
     display: none;
   }
 }
+
 @media (max-width: 769px) {
   .txt-lg {
     margin: auto;
     max-width: 90%;
   }
 }
+
 @media (max-width: 590px) {
   .txt-lg {
     max-width: 100%;
@@ -380,17 +446,19 @@ margin: 1rem 0;
 .projects {
   background-color: var(--color-bg-500);
 }
+
 .flex-projects {
   display: flex;
   justify-content: center;
   gap: 1em;
   flex-wrap: wrap;
 }
+
 .project {
   border-radius: 5px;
   overflow: hidden;
   min-width: 310px;
-  max-width: 400px;
+  max-width: 390px;
   flex: 1 1 30%;
   height: 260px;
   background-position: center;
@@ -399,39 +467,54 @@ margin: 1rem 0;
   display: flex;
   align-items: end;
 }
+
 .newsapi {
   background-image: url(/assests/img/news.jpg);
 }
+
 .insta {
   background-image: url(/assests/img/inst.jpg);
 }
+
 .notes {
   background-image: url(/assests/img/notes.png);
 }
+
 .dict {
   background-image: url(/assests/img/dict.jpg);
 }
+
 .joke {
   background-image: url(/assests/img/jk.jpg);
 }
 
-.project > div {
+.project>div {
   width: 100%;
   padding: 0.5em 1em;
   background-color: var(--color-bg-200);
 }
+
 .project span {
   display: block;
   color: var(--color-txt-200);
-  margin-bottom: 0.5rem;
+  margin: .5rem 0;
   font-weight: 600;
 }
+
 .project span:first-child {
   font-size: 1.2rem;
   color: var(--color-x-1);
   font-weight: bold;
 }
+
 .project a {
+  color: var(--color-x-1);
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 1.125rem;
+}
+
+.project a:last-of-type {
   border: 2px solid var(--color-txt-200);
   background-color: var(--color-bg-500);
   color: var(--color-txt-200);
@@ -443,19 +526,24 @@ margin: 1rem 0;
   transition: all 0.3s ease-in;
   font-weight: 600;
 }
+
 .project a:hover {
   background-color: var(--color-txt-300);
 }
+
 .contact {
   background-color: var(--color-bg-300);
 }
+
 .contact .inner {
   display: flex;
   flex-wrap: wrap;
 }
+
 .contact form {
   flex: 1 1 50%;
 }
+
 .contact form input,
 textarea {
   padding: 1em;
@@ -467,11 +555,13 @@ textarea {
   width: 100%;
   color: var(--color-txt-200);
 }
+
 .contact form div {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
 }
+
 .contact form button {
   margin: 1rem 0;
   border: 2px solid var(--color-txt-100);
@@ -484,15 +574,18 @@ textarea {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .contact form button:hover {
   background-color: var(--color-bg-300);
 }
+
 .social {
   flex: 1 1 50%;
   display: grid;
   place-content: center;
   gap: 1rem;
 }
+
 .social li {
   display: flex;
   align-items: center;
@@ -503,13 +596,16 @@ textarea {
   width: max-content;
   padding: 0.75em;
 }
+
 .social li a {
   color: var(--color-txt-200);
   cursor: pointer;
 }
+
 .social li a:hover {
   color: var(--color-x-1);
 }
+
 .social img {
   max-width: 2rem;
 }

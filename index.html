@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assests/css/style.css" />
     <script defer src="/assests/js/script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("cDmtd42_gi1RG8Ybx");
+   })();
+</script>
     <title>Jean Eudes</title>
   </head>
 
-  <body>
+  <body style="visibility: hidden;">
     <div class="nav">
       <nav>
         <a href="/">Jeunih</a>
@@ -36,7 +44,7 @@
           <div class="text-content hidden">
             <p class="fd-sd" style="--delay: 1;">Welcome</p>
             <p class="fd-sd" style="--delay: 2;">I'm <span>Jean </span>Eudes</p>
-            <p class="h-colored fd-sd" style="--delay: 2.4;">Programmer/Web Developer</p>
+            <p class="h-colored fd-in" style="--delay: 2.4;">Programmer/Web Developer</p>
           </div>
           <a  class="git fd-sd" style="--delay: 1.4;" target="_blank" href="https://github.com/jeunih0001/">
             Jeunih0001
@@ -102,13 +110,13 @@
               </div>
               <div class="level"><div class="level-bar"></div></div>
             </li>
-            <li class="s-top hidden" id="jv">
+            <!-- <li class="s-top hidden" id="jv">
               <div class="">
                 JAVA
                 <img src="/assests/img/java.svg" alt="" />
               </div>
               <div class="level"><div class="level-bar"></div></div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -118,37 +126,30 @@
           <ul class="flex-projects">
             <li class="project newsapi s-fd hidden">
               <div class="">
-                <span>Fast News</span>
+                <a target="_blank" href="http://jeunih0001.pythonanywhere.com/">Flash News (visit site)</a>
                 <span>Python Flask,JAVASCRIPT</span>
-                <a target="_blank" href="https://github.com/jeunih0001/FlashNews">View Code</a>
+                <a target="_blank" href="https://github.com/jeunih0001/QuickNews">View Code</a>
               </div>
             </li>
             <li class="project insta s-fd hidden">
               <div class="">
-                <span>Instagram Clone</span>
+                <a target="_blank" href="https://github.com/jeunih0001/insta">Instagram Clone</a>
                 <span>Laravel,Vue.JS</span>
-                <a target="_blank" href="https://github.com/jeunih0001/GramClone">View Code</a>
+                <a target="_blank" href="https://github.com/jeunih0001/insta">View Code</a>
               </div>
             </li>
             <li class="project notes s-fd hidden">
               <div class="">
-                <span>Notes</span>
+                <a target="_blank" href="http://youdes1.pythonanywhere.com/">Notes (visit site)</a>
                 <span>Python Flask</span>
                 <a target="_blank" href="https://github.com/jeunih0001/Notes">View Code</a>
               </div>
             </li>
             <li class="project dict s-fd hidden">
               <div class="">
-                <span>Dictionary</span>
+                <a target="_blank" href="https://jeunih0001.github.io/Dictionary/">Dictionary (visit site)</a>
                 <span>JAVASCRIPT</span>
                 <a target="_blank" href="https://github.com/jeunih0001/Dictionary">View Code</a>
-              </div>
-            </li>
-            <li class="project joke s-fd hidden">
-              <div class="">
-                <span>Joke Api</span>
-                <span>JAVASCRIPT</span>
-                <a target="_blank" href="https://github.com/jeunih0001/JokesGenerator">View Code</a>
               </div>
             </li>
           </ul>
@@ -159,16 +160,16 @@
         <div class="inner">
           <form action="" class="s-top hidden">
             <div class="">
-              <input type="text" placeholder="Enter Your Name" />
-              <input type="email" placeholder="Enter Your Email Address" />
+              <input type="text" placeholder="Enter Your Name" id="name" />
+              <input type="email" placeholder="Enter Your Email Address" id="email" />
             </div>
             <textarea
-              name="mess"
-              id=""
+              name="message"
+              id="message"
               rows="10"
               placeholder="Enter Your Message"
             ></textarea>
-            <button>Submit</button>
+            <button type="button" onclick="sendEmail()">Submit</button>
           </form>
           <ul class="social s-left hidden">
             <li>
@@ -187,5 +188,6 @@
         </div>
       </section>
     </div>
+    <script>0</script>
   </body>
 </html>
